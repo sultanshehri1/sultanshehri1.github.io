@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,17 +8,18 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
+      padding: 20px;
     }
     .card {
       background: white;
       padding: 50px;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
       max-width: 700px;
       text-align: center;
     }
@@ -28,35 +29,85 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 20px;
-      border: 3px solid #0a66c2;
+      border: 4px solid #667eea;
     }
     h1 { margin-bottom: 10px; color: #111; }
-    h2 { color: #0a66c2; font-weight: normal; margin-bottom: 25px; }
-    p { font-size: 20px; line-height: 1.8; color: #444; }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      text-decoration: none;
-      background: #0a66c2;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 10px;
-      font-size: 18px;
+    h2 { color: #667eea; font-weight: normal; margin-bottom: 25px; font-size: 18px; }
+    h3 { color: #333; margin-top: 30px; margin-bottom: 15px; }
+    p { font-size: 18px; line-height: 1.8; color: #555; }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 25px;
     }
-    a:hover { opacity: 0.9; }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      font-size: 16px;
+      transition: transform 0.2s;
+    }
+    .btn:hover { transform: scale(1.05); }
+    .github { background: #333; color: white; }
+    .linkedin { background: #0077b5; color: white; }
+    .email { background: #ea4335; color: white; }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .skill-tag {
+      background: #f0f0f0;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #667eea;
+    }
+    hr {
+      margin: 30px 0;
+      border: none;
+      height: 1px;
+      background: #eee;
+    }
   </style>
 </head>
 <body>
   <div class="card">
-    <img class="profile-img" src="sultan.png" alt="صورة الدكتور">
-    <h1>Dr. Sultan Alshehri</h1>
-    <h2>sultanshehri1.github.io</h2>
+    <img class="profile-img" src="sultan.png" alt="دكتور سلطان">
+    
+    <h1>د. سلطان الشهري</h1>
+    <h2>Dr. Sultan Alshehri</h2>
+    <h2>🔬 sultanshehri1.github.io</h2>
+    
     <p>
-      Interested in Artificial Intelligence,<br>
-      Machine Learning, and Deep Learning.<br>
-      Exploring how data shapes intelligent systems.
+      🤖 Interested in Artificial Intelligence,<br>
+      📊 Machine Learning, and Deep Learning.<br>
+      🚀 Exploring how data shapes intelligent systems.
     </p>
-    <a href="https://github.com/sultanshehri1" target="_blank">GitHub</a>
+    
+    <div class="skills">
+      <span class="skill-tag">🐍 Python</span>
+      <span class="skill-tag">🧠 TensorFlow</span>
+      <span class="skill-tag">📈 Data Science</span>
+      <span class="skill-tag">🤖 AI</span>
+    </div>
+    
+    <hr>
+    
+    <div class="btn-group">
+      <a href="https://github.com/sultanshehri1" target="_blank" class="btn github">🐙 GitHub</a>
+      <a href="#" class="btn linkedin">🔗 LinkedIn</a>
+      <a href="mailto:sultan.alshehri@example.com" class="btn email">📧 البريد الإلكتروني</a>
+    </div>
+    
+    <p style="font-size: 14px; margin-top: 30px; color: #999;">
+      📍 متاح للتعاون والمشاريع البحثية
+    </p>
   </div>
 </body>
 </html>
